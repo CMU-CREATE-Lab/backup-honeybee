@@ -26,13 +26,16 @@ public class HoneybeeDeviceHandler extends DeviceHandler {
         return new MessageQueue(getDataService());
     }
 
+
     @Override
     public DeviceListener initializeDeviceListener() {
         return new HoneybeeDeviceListener();
     }
 
+
     @Override
     public DataListener initializeDataListener() {
         return new HoneybeeDataListener();
     }
+
 }
