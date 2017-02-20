@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:activity="org.cmucreatelab.tasota.airprototype.activities.readable_list.ReadableListActivity">
+
+    <item android:id="@+id/action_scan"
+        android:icon="@drawable/ic_refresh_white_24dp"
+        android:title="Scan"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_stop_scan"
+        android:icon="@drawable/ic_stop_white_24dp"
+        android:title="Stop Scan"
+        android:visible="false"
+        app:showAsAction="always" />
+
+</menu>
