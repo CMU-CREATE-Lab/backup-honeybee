@@ -74,8 +74,16 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(Constants.LOG_TAG,"got honeybee addr="+honeybee.getName());
                 // TODO attempt to connect
                 scanForDevice(false);
+                GlobalHandler.getInstance(getApplicationContext()).melodySmartDeviceHandler.connect(honeybee.getBluetoothDevice());
             }
         });
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        GlobalHandler.getInstance(getApplicationContext()).currentActivity = this;
     }
 
 

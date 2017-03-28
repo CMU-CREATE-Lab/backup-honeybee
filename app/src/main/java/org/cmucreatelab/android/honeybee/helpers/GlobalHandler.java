@@ -1,5 +1,6 @@
 package org.cmucreatelab.android.honeybee.helpers;
 
+import android.app.Activity;
 import android.content.Context;
 
 import org.cmucreatelab.android.honeybee.helpers.melodysmart.HoneybeeDeviceHandler;
@@ -12,6 +13,7 @@ public class GlobalHandler {
 
     public Context appContext;
     public HoneybeeDeviceHandler melodySmartDeviceHandler;
+    public Activity currentActivity;
 
 
     // Singleton Implementation

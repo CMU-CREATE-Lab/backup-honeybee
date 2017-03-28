@@ -29,7 +29,7 @@ public class HoneybeeDeviceHandler extends DeviceHandler {
 
     @Override
     public DeviceListener initializeDeviceListener() {
-        return new HoneybeeDeviceListener();
+        return new HoneybeeDeviceListener(globalHandler);
     }
 
 
