@@ -3,10 +3,12 @@ package org.cmucreatelab.android.honeybee.activities;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 
 import org.cmucreatelab.android.honeybee.R;
 import org.cmucreatelab.android.honeybee.helpers.GlobalHandler;
 import org.cmucreatelab.android.honeybee.helpers.static_classes.Constants;
+import org.cmucreatelab.android.melodysmart.models.MelodySmartMessage;
 
 public class HoneybeeShowActivity extends AppCompatActivity {
 
@@ -16,6 +18,29 @@ public class HoneybeeShowActivity extends AppCompatActivity {
         Log.v(Constants.LOG_TAG, "HoneybeeShowActivity.onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_honeybee_show);
+
+        // button listeners
+        findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MelodySmartMessage m = new MelodySmartMessage("r");
+                GlobalHandler.getInstance(getApplicationContext()).melodySmartDeviceHandler.addMessage(m);
+            }
+        });
+        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MelodySmartMessage m = new MelodySmartMessage("I01");
+                GlobalHandler.getInstance(getApplicationContext()).melodySmartDeviceHandler.addMessage(m);
+            }
+        });
+        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MelodySmartMessage m = new MelodySmartMessage("W01");
+                GlobalHandler.getInstance(getApplicationContext()).melodySmartDeviceHandler.addMessage(m);
+            }
+        });
     }
 
 
@@ -32,6 +57,7 @@ public class HoneybeeShowActivity extends AppCompatActivity {
         super.onDestroy();
         GlobalHandler.getInstance(getApplicationContext()).melodySmartDeviceHandler.disconnect();
     }
+
 
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {

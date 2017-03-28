@@ -35,7 +35,7 @@ public class HoneybeeDeviceHandler extends DeviceHandler {
 
     @Override
     public DataListener initializeDataListener() {
-        return new HoneybeeDataListener();
+        return new HoneybeeDataListener(this);
     }
 
 }

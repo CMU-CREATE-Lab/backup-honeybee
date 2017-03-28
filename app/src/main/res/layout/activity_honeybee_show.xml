@@ -8,4 +8,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView" />
+
+    <Button
+        android:text="r"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:text="I01" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:text="W01" />
 </LinearLayout>
