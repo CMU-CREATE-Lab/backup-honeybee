@@ -4,6 +4,7 @@ import android.util.Log;
 
 import org.cmucreatelab.android.honeybee.classes.HoneybeeMessage;
 import org.cmucreatelab.android.honeybee.helpers.static_classes.Constants;
+import org.cmucreatelab.android.honeybee.helpers.static_classes.PacketManager;
 import org.cmucreatelab.android.melodysmart.DeviceHandler;
 import org.cmucreatelab.android.melodysmart.MessageQueue;
 import org.cmucreatelab.android.melodysmart.listeners.DataListener;
@@ -28,11 +29,13 @@ public class HoneybeeDataListener extends DataListener<HoneybeeMessage, MessageQ
 
     @Override
     public void onMessageReceived(HoneybeeMessage request) {
-        Log.v(Constants.LOG_TAG, "HoneybeeDataListener.onMessageReceived");
         if (request.hasReceivedExpectedResponses()) {
             Log.v(Constants.LOG_TAG, "HoneybeeDataListener.onMessageReceived: Finished receiving responses");
             for (String response: request.getResponses()) {
                 Log.v(Constants.LOG_TAG, "HoneybeeDataListener.onMessageReceived: > " + response);
+            }
+            if (request.getExpectedResponseSize() > 1) {
+                Log.v(Constants.LOG_TAG, "HoneybeeDataListener.onMessageReceived (parsed): " + PacketManager.parseResponse(request));
             }
         }
     }
