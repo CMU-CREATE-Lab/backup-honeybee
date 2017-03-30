@@ -23,7 +23,7 @@ public class HoneybeeDeviceHandler extends DeviceHandler {
 
     @Override
     public MessageQueue initializeMessageQueue() {
-        return new MessageQueue(getDataService());
+        return new MessageQueue(this);
     }
 
 

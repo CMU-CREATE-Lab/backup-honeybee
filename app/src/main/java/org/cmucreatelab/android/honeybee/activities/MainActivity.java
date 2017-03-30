@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void scanForDevice(boolean isScanning) {
-        GlobalHandler.getInstance(getApplicationContext()).melodySmartDeviceHandler.setFlutterScanning(isScanning, leScanCallBack);
+        GlobalHandler.getInstance(getApplicationContext()).melodySmartDeviceHandler.setDeviceScanning(isScanning, leScanCallBack);
 
         if (isScanning) {
             menu.findItem(R.id.action_scan).setVisible(false);

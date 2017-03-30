@@ -6,9 +6,9 @@ import android.util.Log;
 import android.view.View;
 
 import org.cmucreatelab.android.honeybee.R;
+import org.cmucreatelab.android.honeybee.classes.HoneybeeMessage;
 import org.cmucreatelab.android.honeybee.helpers.GlobalHandler;
 import org.cmucreatelab.android.honeybee.helpers.static_classes.Constants;
-import org.cmucreatelab.android.melodysmart.models.MelodySmartMessage;
 
 public class HoneybeeShowActivity extends AppCompatActivity {
 
@@ -23,21 +23,21 @@ public class HoneybeeShowActivity extends AppCompatActivity {
         findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MelodySmartMessage m = new MelodySmartMessage("r");
+                HoneybeeMessage m = new HoneybeeMessage("r");
                 GlobalHandler.getInstance(getApplicationContext()).melodySmartDeviceHandler.addMessage(m);
             }
         });
         findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MelodySmartMessage m = new MelodySmartMessage("I01");
+                HoneybeeMessage m = new HoneybeeMessage("I01");
                 GlobalHandler.getInstance(getApplicationContext()).melodySmartDeviceHandler.addMessage(m);
             }
         });
         findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MelodySmartMessage m = new MelodySmartMessage("W01");
+                HoneybeeMessage m = new HoneybeeMessage("W01");
                 GlobalHandler.getInstance(getApplicationContext()).melodySmartDeviceHandler.addMessage(m);
             }
         });
