@@ -35,7 +35,7 @@ public class HoneybeeDataListener extends DataListener<HoneybeeMessage, MessageQ
                 Log.v(Constants.LOG_TAG, "HoneybeeDataListener.onMessageReceived: > " + response);
             }
             if (request.getExpectedResponseSize() > 1) {
-                Log.v(Constants.LOG_TAG, "HoneybeeDataListener.onMessageReceived (parsed): " + PacketManager.parseResponse(request));
+                Log.v(Constants.LOG_TAG, "HoneybeeDataListener.onMessageReceived (parsed): " + PacketManager.concatResponsePackets(request));
             }
         }
     }

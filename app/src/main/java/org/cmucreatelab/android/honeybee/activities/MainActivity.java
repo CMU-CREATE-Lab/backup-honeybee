@@ -72,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Honeybee honeybee = (Honeybee)leDeviceAdapter.getItem(i);
                 Log.i(Constants.LOG_TAG,"got honeybee addr="+honeybee.getName());
-                // TODO attempt to connect
                 scanForDevice(false);
                 GlobalHandler.getInstance(getApplicationContext()).melodySmartDeviceHandler.connect(honeybee.getBluetoothDevice());
             }
