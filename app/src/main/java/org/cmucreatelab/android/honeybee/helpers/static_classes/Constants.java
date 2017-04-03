@@ -8,8 +8,6 @@ public class Constants {
 
     public static final String LOG_TAG = "HoneybeeAndroid";
 
-    public static final String APP_VERSION = "0.0.0";
-
     public static final String HONEYBEE_MAC_ADDRESS = "20:FA:BB";
 
 }

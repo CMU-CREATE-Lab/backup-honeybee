@@ -5,7 +5,6 @@ import android.util.Log;
 import com.bluecreation.melodysmart.BLEError;
 
 import org.cmucreatelab.android.honeybee.activities.HoneybeeShowActivity;
-import org.cmucreatelab.android.honeybee.activities.MainActivity;
 import org.cmucreatelab.android.honeybee.helpers.GlobalHandler;
 import org.cmucreatelab.android.honeybee.helpers.static_classes.Constants;
 import org.cmucreatelab.android.melodysmart.listeners.DeviceListener;
@@ -27,7 +26,6 @@ public class HoneybeeDeviceListener extends DeviceListener {
     @Override
     public void onConnected() {
         Log.v(Constants.LOG_TAG, "HoneybeeDeviceListener.onConnected");
-        //Intent intent = new Intent(globalHandler.appContext, MainActivity.class);
         Intent intent = new Intent(globalHandler.currentActivity, HoneybeeShowActivity.class);
         globalHandler.currentActivity.startActivity(intent);
     }

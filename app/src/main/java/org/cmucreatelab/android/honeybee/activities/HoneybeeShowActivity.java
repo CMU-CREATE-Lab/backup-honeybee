@@ -74,30 +74,4 @@ public class HoneybeeShowActivity extends AppCompatActivity {
         GlobalHandler.getInstance(getApplicationContext()).melodySmartDeviceHandler.disconnect();
     }
 
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-//        this.menu = menu;
-//        return true;
-//    }
-
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        int id = item.getItemId();
-//        switch (id) {
-//            case R.id.action_scan:
-//                Log.v(Constants.LOG_TAG, "onOptionsItemSelected: SCAN selected.");
-//                scanForDevice(true);
-//                return true;
-//            case R.id.action_stop_scan:
-//                Log.v(Constants.LOG_TAG, "onOptionsItemSelected: STOP SCAN selected.");
-//                scanForDevice(false);
-//                return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
-
 }
